@@ -1,6 +1,6 @@
 {
   "name": "redux-standard-reducer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A redux reducer for standard action that merge data to state",
   "main": "lib/index.js",
   "dependencies": {
@@ -30,7 +30,11 @@
     "type": "git",
     "url": "git+ssh://git@github.com/magicdawn/redux-standard-reducer.git"
   },
-  "keywords": ["redux", "reducer", "standard"],
+  "keywords": [
+    "redux",
+    "reducer",
+    "standard"
+  ],
   "author": "magicdawn",
   "license": "MIT",
   "bugs": {
