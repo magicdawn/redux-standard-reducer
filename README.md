@@ -1,4 +1,6 @@
 # redux-standard-reducer
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/magicdawn/redux-standard-reducer.svg)](https://greenkeeper.io/)
 > A reducer that handles standard action
 
 [![Build Status](https://img.shields.io/travis/magicdawn/reduce-reducers.svg?style=flat-square)](https://travis-ci.org/magicdawn/reduce-reducers)
