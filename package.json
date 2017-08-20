@@ -1,0 +1,43 @@
+{
+  "name": "redux-standard-reducer",
+  "version": "0.0.1",
+  "description": "A reducer that handles standard action",
+  "main": "lib/index.js",
+  "dependencies": {
+    "lodash.mergewith": "^4.6.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-register": "^6.26.0",
+    "codecov": "^2.2.0",
+    "eslint": "^4.5.0",
+    "istanbul": "^1.1.0-alpha.1",
+    "mocha": "^2.5.3",
+    "reduce-reducers": "^0.1.2",
+    "redux": "^3.7.2",
+    "should": "^11.2.1"
+  },
+  "scripts": {
+    "build": "babel src -d lib",
+    "test": "mocha",
+    "test-cover": "istanbul cover _mocha -- -u exports",
+    "report-cover": "codecov"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/magicdawn/redux-standard-reducer.git"
+  },
+  "keywords": [
+    "redux",
+    "reducer",
+    "standard"
+  ],
+  "author": "magicdawn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/magicdawn/redux-standard-reducer/issues"
+  },
+  "homepage": "https://github.com/magicdawn/redux-standard-reducer#readme"
+}
