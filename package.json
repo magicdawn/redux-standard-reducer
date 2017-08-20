@@ -21,6 +21,7 @@
   },
   "scripts": {
     "build": "babel src -d lib",
+    "prepublish": "npm run build",
     "test": "mocha",
     "test-cover": "istanbul cover _mocha -- -u exports",
     "report-cover": "codecov"
