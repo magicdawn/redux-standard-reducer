@@ -1,8 +1,8 @@
 # redux-standard-reducer
 > A redux reducer for standard action that merge data to state
 
-[![Build Status](https://img.shields.io/travis/magicdawn/reduce-reducers.svg?style=flat-square)](https://travis-ci.org/magicdawn/reduce-reducers)
-[![Coverage Status](https://img.shields.io/codecov/c/github/magicdawn/reduce-reducers.svg?style=flat-square)](https://codecov.io/gh/magicdawn/reduce-reducers)
+[![Build Status](https://img.shields.io/travis/magicdawn/redux-standard-reducer.svg?style=flat-square)](https://travis-ci.org/magicdawn/redux-standard-reducer)
+[![Coverage Status](https://img.shields.io/codecov/c/github/magicdawn/redux-standard-reducer.svg?style=flat-square)](https://codecov.io/gh/magicdawn/redux-standard-reducer)
 [![npm version](https://img.shields.io/npm/v/redux-standard-reducer.svg?style=flat-square)](https://www.npmjs.com/package/redux-standard-reducer)
 [![npm downloads](https://img.shields.io/npm/dm/redux-standard-reducer.svg?style=flat-square)](https://www.npmjs.com/package/redux-standard-reducer)
 [![npm license](https://img.shields.io/npm/l/redux-standard-reducer.svg?style=flat-square)](http://magicdawn.mit-license.org)
