@@ -10,9 +10,17 @@ describe('mergeState', function() {
 
   it('should not change', function() {
     const state = { sub: { list: [], obj: {} } }
-    const $new = mergeState(state, { list: [1] })
+    const $new = mergeState(state, { sub: { list: [1] } })
 
     // obj should not change
     assert($new.sub.obj === state.sub.obj)
+  })
+
+  it('should merge rigth', function() {
+    const state = { sub: { list: [], obj: {} } }
+    const $new = mergeState(state, { sub: { obj: null } })
+
+    // obj should not change
+    assert(!$new.sub.obj)
   })
 })
