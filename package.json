@@ -1,6 +1,6 @@
 {
   "name": "redux-standard-reducer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A redux reducer for standard action that merge data to state",
   "main": "lib/index.js",
   "dependencies": {
