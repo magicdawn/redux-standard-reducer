@@ -5,9 +5,20 @@ export const customMerger = (cur, newValue) => {
   if (Array.isArray(newValue)) {
     return newValue
   }
+
+  // make `state.obj === mergeState(state).obj`
+  if (newValue && typeof newValue === 'object' && !cur) {
+    return newValue
+  }
 }
 
 export function mergeState(...args) {
+  // mergeState()
+  // mergeState(state)
+  if (args.length <= 1) {
+    return args[0]
+  }
+
   return _mergeWith({}, ...args, customMerger)
 }
 

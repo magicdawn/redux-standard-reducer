@@ -57,7 +57,6 @@ describe('Simple', function() {
   })
 
   it('skip when not ok', function() {
-    console.log(1111111111111111)
     // no action
     reducer(state, { foo: 'bar' }).partial2.value.should.equal(2)
 
