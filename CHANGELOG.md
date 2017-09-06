@@ -1,8 +1,12 @@
 # CHANGELOG
 
+## v0.1.0 2017-09-06
+
+- add immutability-helper package, use `action.update` to modify `store.state`
+
 ## v0.0.3 2017-08-30
 
-- add more login to customMerger, existing `obj` should be strict equal after merge,
+- add more logic to customMerger, existing `obj` should be strict equal after merge,
   or, React `componentWillReceiveProps` will gone wrong
 
 ## v0.0.2 2017-08-20
