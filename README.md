@@ -30,23 +30,29 @@ const finalReducer = reduceReducers(
 const store = createStore(initialState, finalReducer, enhancers)
 ```
 
+### enable this reducer
+
+use any one of these:
+
+- make `action.type` starts with `STANDARD_MERGE_STATE`, this reducer will handle the action
+- make `action.standard = true`, this reducer will handle the action
+
+
 ### Action with `payload`
 
 ```js
 action = {
   type,
   standard,
-  payload,
+  payload: {...},
 }
 ```
 
 |key        |type       |remark|
 |-----------|-----------|------|
-| `type`    | `String`  | if type starts with `STANDARD_MERGE_STATE`, the action payload will be merged to state |
-| `standard`| `Boolean` | if `action.standard` is true, the action payload will be merged to state |
 | `payload` | `Object`  | the data need to be merged to the `store.state` |
 
-more see the [test/simple.js](test/simple.js)
+- more see the [test/simple.js](test/simple.js)
 
 ### Action with `update`
 
@@ -54,18 +60,16 @@ more see the [test/simple.js](test/simple.js)
 action = {
   type,
   standard,
-  update: {},
+  update: {...},
 }
 ```
 
 |key        |type       |remark|
 |-----------|-----------|------|
-| `type`    | `String`  | if type starts with `STANDARD_MERGE_STATE`, the action payload will be merged to state |
-| `standard`| `Boolean` | if `action.standard` is true, the action payload will be merged to state |
-| `update`  | `Object`  | the `update` operation, will pass to [immutability-helper](https://github.com/kolodny/immutability-helper), equal to `immutabilityHelper(store.state, action.update)` |
+| `update`  | `Object`  | the `update` operation, will pass to [immutability-helper](https://github.com/kolodny/immutability-helper#update), equal to `immutabilityHelper(store.state, action.update)` |
 
 - more see the [test/simple.js](test/update.js)
-- see `update` in [immutability-helper](https://github.com/kolodny/immutability-helper) homepage
+- see `update` in [immutability-helper](https://github.com/kolodny/immutability-helper#update) homepage
 
 
 ## Changelog
