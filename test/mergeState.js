@@ -1,5 +1,5 @@
-import { mergeState } from '../src/index'
 import assert from 'assert'
+import { mergeState } from '../src/index'
 
 describe('mergeState', function() {
   it('nothing to merge', function() {

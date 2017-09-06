@@ -1,4 +1,9 @@
+import assert from 'assert'
 import _mergeWith from 'lodash.mergewith'
+import update from 'immutability-helper'
+
+// export `update`
+export { update }
 
 // lodash, mergeWith
 export const customMerger = (cur, newValue) => {
@@ -38,12 +43,25 @@ export function mergeState(...args) {
  */
 
 export default function standardReducer(state, action) {
-  if (!action || !action.type || !action.payload) return state
+  if (!action || !action.type) return state
 
   // STANDARD_MERGE_STATE
   const ok =
     action.type.startsWith('STANDARD_MERGE_STATE') || Boolean(action.standard)
   if (!ok) return state
 
-  return mergeState(state, action.payload)
+  // use immutability-helper `update`
+  if (action.update) {
+    if (typeof action.update !== 'object') {
+      throw new Error('expect standard action.update = object')
+    }
+    state = update(state, action.update)
+  }
+
+  // merge
+  if (action.payload) {
+    state = mergeState(state, action.payload)
+  }
+
+  return state
 }
