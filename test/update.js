@@ -32,6 +32,8 @@ describe('immutability-helper', function() {
   })
 
   it('it works', function() {
+    const oldPartial2 = state.partial2
+
     state = reducer(state, {
       type: 'UPDATE_PARTIAL_1',
       standard: true,
@@ -42,6 +44,9 @@ describe('immutability-helper', function() {
       },
     })
     state.partial1.foo.should.equal('updated-foo-1')
+
+    // partial2 should not change
+    assert(state.partial2 === oldPartial2)
 
     // init `partial1.sub` to object
     state = reducer(state, {
